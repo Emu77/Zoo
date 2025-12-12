@@ -35,6 +35,9 @@ namespace Zooverwaltung
             LoadFutter();
             LoadRationCombos();
             LoadUebersicht();
+            LoadUebersichtCombos();
+            LoadUebersicht();
+
         }
 
         // ===== Kontinente =====
@@ -357,13 +360,18 @@ namespace Zooverwaltung
 
         private void LoadRationen()
         {
-            if (cboRationTier.SelectedValue == null) return;
-            int tid = (int)cboRationTier.SelectedValue;
+            // SelectedValue enthält bei dir das Tier-Objekt!
+            if (cboRationTier.SelectedValue is not Tier tier)
+                return;
+
+            int tid = tier.TierID;
+
             var list = futterrationRepo.GetByTier(tid);
+
             lstRationen.DataSource = null;
             lstRationen.DataSource = list;
-            lstRationen.DisplayMember = "Anzeige";
         }
+
 
         private void btnRationSpeichern_Click(object sender, EventArgs e)
         {
@@ -397,5 +405,23 @@ namespace Zooverwaltung
         {
             dgvUebersicht.DataSource = tierRepo.GetOverview();
         }
+
+        private void Fütterungen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadUebersichtCombos()
+        {
+            var tiere = tierRepo.GetAll();
+
+            // "Alle" als Auswahl hinzufügen
+            tiere.Insert(0, new Tier { TierID = 0, Name = "Alle" });
+
+            cboUebersichtTier.DataSource = tiere;
+            cboUebersichtTier.DisplayMember = "Name";
+            cboUebersichtTier.ValueMember = "TierID";
+        }
+
     }
 }

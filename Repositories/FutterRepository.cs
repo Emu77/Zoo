@@ -5,7 +5,7 @@ using Zooverwaltung.Models;
 
 namespace Zooverwaltung.Repositories
 {
-    public class FutterRepository
+    public class FutterRepository : BaseRepository
     {
         public List<Futter> GetAll()
         {

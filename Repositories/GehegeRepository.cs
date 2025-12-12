@@ -5,7 +5,7 @@ using Zooverwaltung.Models;
 
 namespace Zooverwaltung.Repositories
 {
-    public class GehegeRepository
+    public class GehegeRepository : BaseRepository
     {
         public List<Gehege> GetAll()
         {

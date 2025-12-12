@@ -5,7 +5,7 @@ using Zooverwaltung.Models;
 
 namespace Zooverwaltung.Repositories
 {
-    public class KontinentRepository
+    public class KontinentRepository : BaseRepository
     {
         public List<Kontinent> GetAll()
         {

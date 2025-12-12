@@ -18,720 +18,762 @@ namespace Zooverwaltung
 
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabKontinent = new System.Windows.Forms.TabPage();
-            this.btnKontinentLoeschen = new System.Windows.Forms.Button();
-            this.btnKontinentSpeichern = new System.Windows.Forms.Button();
-            this.lstKontinente = new System.Windows.Forms.ListBox();
-            this.txtKontinentBezeichnung = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabGehege = new System.Windows.Forms.TabPage();
-            this.btnGehegeLoeschen = new System.Windows.Forms.Button();
-            this.btnGehegeSpeichern = new System.Windows.Forms.Button();
-            this.lstGehege = new System.Windows.Forms.ListBox();
-            this.cboGehegeKontinent = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtGehegeBez = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tabTierart = new System.Windows.Forms.TabPage();
-            this.btnTierartLoeschen = new System.Windows.Forms.Button();
-            this.btnTierartSpeichern = new System.Windows.Forms.Button();
-            this.lstTierarten = new System.Windows.Forms.ListBox();
-            this.txtTierartBez = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tabTiere = new System.Windows.Forms.TabPage();
-            this.btnTierLoeschen = new System.Windows.Forms.Button();
-            this.btnTierSpeichern = new System.Windows.Forms.Button();
-            this.lstTiere = new System.Windows.Forms.ListBox();
-            this.cboTierGehege = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cboTierart = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtpTierGeburt = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtTierGewicht = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtTierName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tabFutter = new System.Windows.Forms.TabPage();
-            this.btnFutterLoeschen = new System.Windows.Forms.Button();
-            this.btnFutterSpeichern = new System.Windows.Forms.Button();
-            this.lstFutter = new System.Windows.Forms.ListBox();
-            this.txtFutterKommentar = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtFutterVerpackung = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtFutterBez = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tabRationen = new System.Windows.Forms.TabPage();
-            this.btnRationLoeschen = new System.Windows.Forms.Button();
-            this.btnRationSpeichern = new System.Windows.Forms.Button();
-            this.lstRationen = new System.Windows.Forms.ListBox();
-            this.dtpRationUhrzeit = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtRationMenge = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cboRationFutter = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.cboRationTier = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tabUebersicht = new System.Windows.Forms.TabPage();
-            this.dgvUebersicht = new System.Windows.Forms.DataGridView();
-            this.tabControl1.SuspendLayout();
-            this.tabKontinent.SuspendLayout();
-            this.tabGehege.SuspendLayout();
-            this.tabTierart.SuspendLayout();
-            this.tabTiere.SuspendLayout();
-            this.tabFutter.SuspendLayout();
-            this.tabRationen.SuspendLayout();
-            this.tabUebersicht.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUebersicht)).BeginInit();
-            this.SuspendLayout();
+            tabFütterungen = new TabControl();
+            tabKontinent = new TabPage();
+            btnKontinentLoeschen = new Button();
+            btnKontinentSpeichern = new Button();
+            lstKontinente = new ListBox();
+            txtKontinentBezeichnung = new TextBox();
+            label1 = new Label();
+            tabGehege = new TabPage();
+            btnGehegeLoeschen = new Button();
+            btnGehegeSpeichern = new Button();
+            lstGehege = new ListBox();
+            cboGehegeKontinent = new ComboBox();
+            label3 = new Label();
+            txtGehegeBez = new TextBox();
+            label2 = new Label();
+            tabTierart = new TabPage();
+            btnTierartLoeschen = new Button();
+            btnTierartSpeichern = new Button();
+            lstTierarten = new ListBox();
+            txtTierartBez = new TextBox();
+            label4 = new Label();
+            tabTiere = new TabPage();
+            btnTierLoeschen = new Button();
+            btnTierSpeichern = new Button();
+            lstTiere = new ListBox();
+            cboTierGehege = new ComboBox();
+            label9 = new Label();
+            cboTierart = new ComboBox();
+            label8 = new Label();
+            dtpTierGeburt = new DateTimePicker();
+            label7 = new Label();
+            txtTierGewicht = new TextBox();
+            label6 = new Label();
+            txtTierName = new TextBox();
+            label5 = new Label();
+            tabFutter = new TabPage();
+            btnFutterLoeschen = new Button();
+            btnFutterSpeichern = new Button();
+            lstFutter = new ListBox();
+            txtFutterKommentar = new TextBox();
+            label12 = new Label();
+            txtFutterVerpackung = new TextBox();
+            label11 = new Label();
+            txtFutterBez = new TextBox();
+            label10 = new Label();
+            tabRationen = new TabPage();
+            btnRationLoeschen = new Button();
+            btnRationSpeichern = new Button();
+            lstRationen = new ListBox();
+            dtpRationUhrzeit = new DateTimePicker();
+            label16 = new Label();
+            txtRationMenge = new TextBox();
+            label15 = new Label();
+            cboRationFutter = new ComboBox();
+            label14 = new Label();
+            cboRationTier = new ComboBox();
+            label13 = new Label();
+            tabUebersicht = new TabPage();
+            dgvUebersicht = new DataGridView();
+            tabFuetterungen = new TabPage();
+            Fütterungen = new Label();
+            dgvFütterungen = new DataGridView();
+            cboUebersichtTier = new ComboBox();
+            tabFütterungen.SuspendLayout();
+            tabKontinent.SuspendLayout();
+            tabGehege.SuspendLayout();
+            tabTierart.SuspendLayout();
+            tabTiere.SuspendLayout();
+            tabFutter.SuspendLayout();
+            tabRationen.SuspendLayout();
+            tabUebersicht.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvUebersicht).BeginInit();
+            tabFuetterungen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvFütterungen).BeginInit();
+            SuspendLayout();
             // 
-            // tabControl1
+            // tabFütterungen
             // 
-            this.tabControl1.Controls.Add(this.tabKontinent);
-            this.tabControl1.Controls.Add(this.tabGehege);
-            this.tabControl1.Controls.Add(this.tabTierart);
-            this.tabControl1.Controls.Add(this.tabTiere);
-            this.tabControl1.Controls.Add(this.tabFutter);
-            this.tabControl1.Controls.Add(this.tabRationen);
-            this.tabControl1.Controls.Add(this.tabUebersicht);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(900, 500);
-            this.tabControl1.TabIndex = 0;
+            tabFütterungen.Controls.Add(tabKontinent);
+            tabFütterungen.Controls.Add(tabGehege);
+            tabFütterungen.Controls.Add(tabTierart);
+            tabFütterungen.Controls.Add(tabTiere);
+            tabFütterungen.Controls.Add(tabFutter);
+            tabFütterungen.Controls.Add(tabRationen);
+            tabFütterungen.Controls.Add(tabUebersicht);
+            tabFütterungen.Controls.Add(tabFuetterungen);
+            tabFütterungen.Dock = DockStyle.Fill;
+            tabFütterungen.Location = new Point(0, 0);
+            tabFütterungen.Name = "tabFütterungen";
+            tabFütterungen.SelectedIndex = 0;
+            tabFütterungen.Size = new Size(900, 500);
+            tabFütterungen.TabIndex = 0;
             // 
             // tabKontinent
             // 
-            this.tabKontinent.Controls.Add(this.btnKontinentLoeschen);
-            this.tabKontinent.Controls.Add(this.btnKontinentSpeichern);
-            this.tabKontinent.Controls.Add(this.lstKontinente);
-            this.tabKontinent.Controls.Add(this.txtKontinentBezeichnung);
-            this.tabKontinent.Controls.Add(this.label1);
-            this.tabKontinent.Location = new System.Drawing.Point(4, 24);
-            this.tabKontinent.Name = "tabKontinent";
-            this.tabKontinent.Padding = new System.Windows.Forms.Padding(3);
-            this.tabKontinent.Size = new System.Drawing.Size(892, 472);
-            this.tabKontinent.TabIndex = 0;
-            this.tabKontinent.Text = "Kontinente";
-            this.tabKontinent.UseVisualStyleBackColor = true;
+            tabKontinent.Controls.Add(btnKontinentLoeschen);
+            tabKontinent.Controls.Add(btnKontinentSpeichern);
+            tabKontinent.Controls.Add(lstKontinente);
+            tabKontinent.Controls.Add(txtKontinentBezeichnung);
+            tabKontinent.Controls.Add(label1);
+            tabKontinent.Location = new Point(4, 24);
+            tabKontinent.Name = "tabKontinent";
+            tabKontinent.Padding = new Padding(3);
+            tabKontinent.Size = new Size(892, 472);
+            tabKontinent.TabIndex = 0;
+            tabKontinent.Text = "Kontinente";
+            tabKontinent.UseVisualStyleBackColor = true;
             // 
             // btnKontinentLoeschen
             // 
-            this.btnKontinentLoeschen.Location = new System.Drawing.Point(187, 74);
-            this.btnKontinentLoeschen.Name = "btnKontinentLoeschen";
-            this.btnKontinentLoeschen.Size = new System.Drawing.Size(75, 23);
-            this.btnKontinentLoeschen.TabIndex = 4;
-            this.btnKontinentLoeschen.Text = "Löschen";
-            this.btnKontinentLoeschen.UseVisualStyleBackColor = true;
-            this.btnKontinentLoeschen.Click += new System.EventHandler(this.btnKontinentLoeschen_Click);
+            btnKontinentLoeschen.Location = new Point(187, 74);
+            btnKontinentLoeschen.Name = "btnKontinentLoeschen";
+            btnKontinentLoeschen.Size = new Size(75, 23);
+            btnKontinentLoeschen.TabIndex = 4;
+            btnKontinentLoeschen.Text = "Löschen";
+            btnKontinentLoeschen.UseVisualStyleBackColor = true;
+            btnKontinentLoeschen.Click += btnKontinentLoeschen_Click;
             // 
             // btnKontinentSpeichern
             // 
-            this.btnKontinentSpeichern.Location = new System.Drawing.Point(106, 74);
-            this.btnKontinentSpeichern.Name = "btnKontinentSpeichern";
-            this.btnKontinentSpeichern.Size = new System.Drawing.Size(75, 23);
-            this.btnKontinentSpeichern.TabIndex = 3;
-            this.btnKontinentSpeichern.Text = "Speichern";
-            this.btnKontinentSpeichern.UseVisualStyleBackColor = true;
-            this.btnKontinentSpeichern.Click += new System.EventHandler(this.btnKontinentSpeichern_Click);
+            btnKontinentSpeichern.Location = new Point(106, 74);
+            btnKontinentSpeichern.Name = "btnKontinentSpeichern";
+            btnKontinentSpeichern.Size = new Size(75, 23);
+            btnKontinentSpeichern.TabIndex = 3;
+            btnKontinentSpeichern.Text = "Speichern";
+            btnKontinentSpeichern.UseVisualStyleBackColor = true;
+            btnKontinentSpeichern.Click += btnKontinentSpeichern_Click;
             // 
             // lstKontinente
             // 
-            this.lstKontinente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstKontinente.FormattingEnabled = true;
-            this.lstKontinente.ItemHeight = 15;
-            this.lstKontinente.Location = new System.Drawing.Point(450, 20);
-            this.lstKontinente.Name = "lstKontinente";
-            this.lstKontinente.Size = new System.Drawing.Size(420, 424);
-            this.lstKontinente.TabIndex = 2;
-            this.lstKontinente.SelectedIndexChanged += new System.EventHandler(this.lstKontinente_SelectedIndexChanged);
+            lstKontinente.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            lstKontinente.FormattingEnabled = true;
+            lstKontinente.ItemHeight = 15;
+            lstKontinente.Location = new Point(450, 20);
+            lstKontinente.Name = "lstKontinente";
+            lstKontinente.Size = new Size(420, 424);
+            lstKontinente.TabIndex = 2;
+            lstKontinente.SelectedIndexChanged += lstKontinente_SelectedIndexChanged;
             // 
             // txtKontinentBezeichnung
             // 
-            this.txtKontinentBezeichnung.Location = new System.Drawing.Point(106, 30);
-            this.txtKontinentBezeichnung.Name = "txtKontinentBezeichnung";
-            this.txtKontinentBezeichnung.Size = new System.Drawing.Size(250, 23);
-            this.txtKontinentBezeichnung.TabIndex = 1;
+            txtKontinentBezeichnung.Location = new Point(106, 30);
+            txtKontinentBezeichnung.Name = "txtKontinentBezeichnung";
+            txtKontinentBezeichnung.Size = new Size(250, 23);
+            txtKontinentBezeichnung.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bezeichnung";
+            label1.AutoSize = true;
+            label1.Location = new Point(20, 33);
+            label1.Name = "label1";
+            label1.Size = new Size(75, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Bezeichnung";
             // 
             // tabGehege
             // 
-            this.tabGehege.Controls.Add(this.btnGehegeLoeschen);
-            this.tabGehege.Controls.Add(this.btnGehegeSpeichern);
-            this.tabGehege.Controls.Add(this.lstGehege);
-            this.tabGehege.Controls.Add(this.cboGehegeKontinent);
-            this.tabGehege.Controls.Add(this.label3);
-            this.tabGehege.Controls.Add(this.txtGehegeBez);
-            this.tabGehege.Controls.Add(this.label2);
-            this.tabGehege.Location = new System.Drawing.Point(4, 24);
-            this.tabGehege.Name = "tabGehege";
-            this.tabGehege.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGehege.Size = new System.Drawing.Size(892, 472);
-            this.tabGehege.TabIndex = 1;
-            this.tabGehege.Text = "Gehege";
-            this.tabGehege.UseVisualStyleBackColor = true;
+            tabGehege.Controls.Add(btnGehegeLoeschen);
+            tabGehege.Controls.Add(btnGehegeSpeichern);
+            tabGehege.Controls.Add(lstGehege);
+            tabGehege.Controls.Add(cboGehegeKontinent);
+            tabGehege.Controls.Add(label3);
+            tabGehege.Controls.Add(txtGehegeBez);
+            tabGehege.Controls.Add(label2);
+            tabGehege.Location = new Point(4, 24);
+            tabGehege.Name = "tabGehege";
+            tabGehege.Padding = new Padding(3);
+            tabGehege.Size = new Size(892, 472);
+            tabGehege.TabIndex = 1;
+            tabGehege.Text = "Gehege";
+            tabGehege.UseVisualStyleBackColor = true;
             // 
             // btnGehegeLoeschen
             // 
-            this.btnGehegeLoeschen.Location = new System.Drawing.Point(187, 126);
-            this.btnGehegeLoeschen.Name = "btnGehegeLoeschen";
-            this.btnGehegeLoeschen.Size = new System.Drawing.Size(75, 23);
-            this.btnGehegeLoeschen.TabIndex = 6;
-            this.btnGehegeLoeschen.Text = "Löschen";
-            this.btnGehegeLoeschen.UseVisualStyleBackColor = true;
-            this.btnGehegeLoeschen.Click += new System.EventHandler(this.btnGehegeLoeschen_Click);
+            btnGehegeLoeschen.Location = new Point(187, 126);
+            btnGehegeLoeschen.Name = "btnGehegeLoeschen";
+            btnGehegeLoeschen.Size = new Size(75, 23);
+            btnGehegeLoeschen.TabIndex = 6;
+            btnGehegeLoeschen.Text = "Löschen";
+            btnGehegeLoeschen.UseVisualStyleBackColor = true;
+            btnGehegeLoeschen.Click += btnGehegeLoeschen_Click;
             // 
             // btnGehegeSpeichern
             // 
-            this.btnGehegeSpeichern.Location = new System.Drawing.Point(106, 126);
-            this.btnGehegeSpeichern.Name = "btnGehegeSpeichern";
-            this.btnGehegeSpeichern.Size = new System.Drawing.Size(75, 23);
-            this.btnGehegeSpeichern.TabIndex = 5;
-            this.btnGehegeSpeichern.Text = "Speichern";
-            this.btnGehegeSpeichern.UseVisualStyleBackColor = true;
-            this.btnGehegeSpeichern.Click += new System.EventHandler(this.btnGehegeSpeichern_Click);
+            btnGehegeSpeichern.Location = new Point(106, 126);
+            btnGehegeSpeichern.Name = "btnGehegeSpeichern";
+            btnGehegeSpeichern.Size = new Size(75, 23);
+            btnGehegeSpeichern.TabIndex = 5;
+            btnGehegeSpeichern.Text = "Speichern";
+            btnGehegeSpeichern.UseVisualStyleBackColor = true;
+            btnGehegeSpeichern.Click += btnGehegeSpeichern_Click;
             // 
             // lstGehege
             // 
-            this.lstGehege.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstGehege.FormattingEnabled = true;
-            this.lstGehege.ItemHeight = 15;
-            this.lstGehege.Location = new System.Drawing.Point(450, 20);
-            this.lstGehege.Name = "lstGehege";
-            this.lstGehege.Size = new System.Drawing.Size(420, 424);
-            this.lstGehege.TabIndex = 4;
-            this.lstGehege.SelectedIndexChanged += new System.EventHandler(this.lstGehege_SelectedIndexChanged);
+            lstGehege.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            lstGehege.FormattingEnabled = true;
+            lstGehege.ItemHeight = 15;
+            lstGehege.Location = new Point(450, 20);
+            lstGehege.Name = "lstGehege";
+            lstGehege.Size = new Size(420, 424);
+            lstGehege.TabIndex = 4;
+            lstGehege.SelectedIndexChanged += lstGehege_SelectedIndexChanged;
             // 
             // cboGehegeKontinent
             // 
-            this.cboGehegeKontinent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGehegeKontinent.FormattingEnabled = true;
-            this.cboGehegeKontinent.Location = new System.Drawing.Point(106, 75);
-            this.cboGehegeKontinent.Name = "cboGehegeKontinent";
-            this.cboGehegeKontinent.Size = new System.Drawing.Size(250, 23);
-            this.cboGehegeKontinent.TabIndex = 3;
+            cboGehegeKontinent.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboGehegeKontinent.FormattingEnabled = true;
+            cboGehegeKontinent.Location = new Point(106, 75);
+            cboGehegeKontinent.Name = "cboGehegeKontinent";
+            cboGehegeKontinent.Size = new Size(250, 23);
+            cboGehegeKontinent.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Kontinent";
+            label3.AutoSize = true;
+            label3.Location = new Point(20, 78);
+            label3.Name = "label3";
+            label3.Size = new Size(59, 15);
+            label3.TabIndex = 2;
+            label3.Text = "Kontinent";
             // 
             // txtGehegeBez
             // 
-            this.txtGehegeBez.Location = new System.Drawing.Point(106, 30);
-            this.txtGehegeBez.Name = "txtGehegeBez";
-            this.txtGehegeBez.Size = new System.Drawing.Size(250, 23);
-            this.txtGehegeBez.TabIndex = 1;
+            txtGehegeBez.Location = new Point(106, 30);
+            txtGehegeBez.Name = "txtGehegeBez";
+            txtGehegeBez.Size = new Size(250, 23);
+            txtGehegeBez.TabIndex = 1;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Bezeichnung";
+            label2.AutoSize = true;
+            label2.Location = new Point(20, 33);
+            label2.Name = "label2";
+            label2.Size = new Size(75, 15);
+            label2.TabIndex = 0;
+            label2.Text = "Bezeichnung";
             // 
             // tabTierart
             // 
-            this.tabTierart.Controls.Add(this.btnTierartLoeschen);
-            this.tabTierart.Controls.Add(this.btnTierartSpeichern);
-            this.tabTierart.Controls.Add(this.lstTierarten);
-            this.tabTierart.Controls.Add(this.txtTierartBez);
-            this.tabTierart.Controls.Add(this.label4);
-            this.tabTierart.Location = new System.Drawing.Point(4, 24);
-            this.tabTierart.Name = "tabTierart";
-            this.tabTierart.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTierart.Size = new System.Drawing.Size(892, 472);
-            this.tabTierart.TabIndex = 2;
-            this.tabTierart.Text = "Tierarten";
-            this.tabTierart.UseVisualStyleBackColor = true;
+            tabTierart.Controls.Add(btnTierartLoeschen);
+            tabTierart.Controls.Add(btnTierartSpeichern);
+            tabTierart.Controls.Add(lstTierarten);
+            tabTierart.Controls.Add(txtTierartBez);
+            tabTierart.Controls.Add(label4);
+            tabTierart.Location = new Point(4, 24);
+            tabTierart.Name = "tabTierart";
+            tabTierart.Padding = new Padding(3);
+            tabTierart.Size = new Size(892, 472);
+            tabTierart.TabIndex = 2;
+            tabTierart.Text = "Tierarten";
+            tabTierart.UseVisualStyleBackColor = true;
             // 
             // btnTierartLoeschen
             // 
-            this.btnTierartLoeschen.Location = new System.Drawing.Point(187, 74);
-            this.btnTierartLoeschen.Name = "btnTierartLoeschen";
-            this.btnTierartLoeschen.Size = new System.Drawing.Size(75, 23);
-            this.btnTierartLoeschen.TabIndex = 4;
-            this.btnTierartLoeschen.Text = "Löschen";
-            this.btnTierartLoeschen.UseVisualStyleBackColor = true;
-            this.btnTierartLoeschen.Click += new System.EventHandler(this.btnTierartLoeschen_Click);
+            btnTierartLoeschen.Location = new Point(187, 74);
+            btnTierartLoeschen.Name = "btnTierartLoeschen";
+            btnTierartLoeschen.Size = new Size(75, 23);
+            btnTierartLoeschen.TabIndex = 4;
+            btnTierartLoeschen.Text = "Löschen";
+            btnTierartLoeschen.UseVisualStyleBackColor = true;
+            btnTierartLoeschen.Click += btnTierartLoeschen_Click;
             // 
             // btnTierartSpeichern
             // 
-            this.btnTierartSpeichern.Location = new System.Drawing.Point(106, 74);
-            this.btnTierartSpeichern.Name = "btnTierartSpeichern";
-            this.btnTierartSpeichern.Size = new System.Drawing.Size(75, 23);
-            this.btnTierartSpeichern.TabIndex = 3;
-            this.btnTierartSpeichern.Text = "Speichern";
-            this.btnTierartSpeichern.UseVisualStyleBackColor = true;
-            this.btnTierartSpeichern.Click += new System.EventHandler(this.btnTierartSpeichern_Click);
+            btnTierartSpeichern.Location = new Point(106, 74);
+            btnTierartSpeichern.Name = "btnTierartSpeichern";
+            btnTierartSpeichern.Size = new Size(75, 23);
+            btnTierartSpeichern.TabIndex = 3;
+            btnTierartSpeichern.Text = "Speichern";
+            btnTierartSpeichern.UseVisualStyleBackColor = true;
+            btnTierartSpeichern.Click += btnTierartSpeichern_Click;
             // 
             // lstTierarten
             // 
-            this.lstTierarten.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstTierarten.FormattingEnabled = true;
-            this.lstTierarten.ItemHeight = 15;
-            this.lstTierarten.Location = new System.Drawing.Point(450, 20);
-            this.lstTierarten.Name = "lstTierarten";
-            this.lstTierarten.Size = new System.Drawing.Size(420, 424);
-            this.lstTierarten.TabIndex = 2;
-            this.lstTierarten.SelectedIndexChanged += new System.EventHandler(this.lstTierarten_SelectedIndexChanged);
+            lstTierarten.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            lstTierarten.FormattingEnabled = true;
+            lstTierarten.ItemHeight = 15;
+            lstTierarten.Location = new Point(450, 20);
+            lstTierarten.Name = "lstTierarten";
+            lstTierarten.Size = new Size(420, 424);
+            lstTierarten.TabIndex = 2;
+            lstTierarten.SelectedIndexChanged += lstTierarten_SelectedIndexChanged;
             // 
             // txtTierartBez
             // 
-            this.txtTierartBez.Location = new System.Drawing.Point(106, 30);
-            this.txtTierartBez.Name = "txtTierartBez";
-            this.txtTierartBez.Size = new System.Drawing.Size(250, 23);
-            this.txtTierartBez.TabIndex = 1;
+            txtTierartBez.Location = new Point(106, 30);
+            txtTierartBez.Name = "txtTierartBez";
+            txtTierartBez.Size = new Size(250, 23);
+            txtTierartBez.TabIndex = 1;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Bezeichnung";
+            label4.AutoSize = true;
+            label4.Location = new Point(20, 33);
+            label4.Name = "label4";
+            label4.Size = new Size(75, 15);
+            label4.TabIndex = 0;
+            label4.Text = "Bezeichnung";
             // 
             // tabTiere
             // 
-            this.tabTiere.Controls.Add(this.btnTierLoeschen);
-            this.tabTiere.Controls.Add(this.btnTierSpeichern);
-            this.tabTiere.Controls.Add(this.lstTiere);
-            this.tabTiere.Controls.Add(this.cboTierGehege);
-            this.tabTiere.Controls.Add(this.label9);
-            this.tabTiere.Controls.Add(this.cboTierart);
-            this.tabTiere.Controls.Add(this.label8);
-            this.tabTiere.Controls.Add(this.dtpTierGeburt);
-            this.tabTiere.Controls.Add(this.label7);
-            this.tabTiere.Controls.Add(this.txtTierGewicht);
-            this.tabTiere.Controls.Add(this.label6);
-            this.tabTiere.Controls.Add(this.txtTierName);
-            this.tabTiere.Controls.Add(this.label5);
-            this.tabTiere.Location = new System.Drawing.Point(4, 24);
-            this.tabTiere.Name = "tabTiere";
-            this.tabTiere.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTiere.Size = new System.Drawing.Size(892, 472);
-            this.tabTiere.TabIndex = 3;
-            this.tabTiere.Text = "Tiere";
-            this.tabTiere.UseVisualStyleBackColor = true;
+            tabTiere.Controls.Add(btnTierLoeschen);
+            tabTiere.Controls.Add(btnTierSpeichern);
+            tabTiere.Controls.Add(lstTiere);
+            tabTiere.Controls.Add(cboTierGehege);
+            tabTiere.Controls.Add(label9);
+            tabTiere.Controls.Add(cboTierart);
+            tabTiere.Controls.Add(label8);
+            tabTiere.Controls.Add(dtpTierGeburt);
+            tabTiere.Controls.Add(label7);
+            tabTiere.Controls.Add(txtTierGewicht);
+            tabTiere.Controls.Add(label6);
+            tabTiere.Controls.Add(txtTierName);
+            tabTiere.Controls.Add(label5);
+            tabTiere.Location = new Point(4, 24);
+            tabTiere.Name = "tabTiere";
+            tabTiere.Padding = new Padding(3);
+            tabTiere.Size = new Size(892, 472);
+            tabTiere.TabIndex = 3;
+            tabTiere.Text = "Tiere";
+            tabTiere.UseVisualStyleBackColor = true;
             // 
             // btnTierLoeschen
             // 
-            this.btnTierLoeschen.Location = new System.Drawing.Point(187, 220);
-            this.btnTierLoeschen.Name = "btnTierLoeschen";
-            this.btnTierLoeschen.Size = new System.Drawing.Size(75, 23);
-            this.btnTierLoeschen.TabIndex = 12;
-            this.btnTierLoeschen.Text = "Löschen";
-            this.btnTierLoeschen.UseVisualStyleBackColor = true;
-            this.btnTierLoeschen.Click += new System.EventHandler(this.btnTierLoeschen_Click);
+            btnTierLoeschen.Location = new Point(187, 220);
+            btnTierLoeschen.Name = "btnTierLoeschen";
+            btnTierLoeschen.Size = new Size(75, 23);
+            btnTierLoeschen.TabIndex = 12;
+            btnTierLoeschen.Text = "Löschen";
+            btnTierLoeschen.UseVisualStyleBackColor = true;
+            btnTierLoeschen.Click += btnTierLoeschen_Click;
             // 
             // btnTierSpeichern
             // 
-            this.btnTierSpeichern.Location = new System.Drawing.Point(106, 220);
-            this.btnTierSpeichern.Name = "btnTierSpeichern";
-            this.btnTierSpeichern.Size = new System.Drawing.Size(75, 23);
-            this.btnTierSpeichern.TabIndex = 11;
-            this.btnTierSpeichern.Text = "Speichern";
-            this.btnTierSpeichern.UseVisualStyleBackColor = true;
-            this.btnTierSpeichern.Click += new System.EventHandler(this.btnTierSpeichern_Click);
+            btnTierSpeichern.Location = new Point(106, 220);
+            btnTierSpeichern.Name = "btnTierSpeichern";
+            btnTierSpeichern.Size = new Size(75, 23);
+            btnTierSpeichern.TabIndex = 11;
+            btnTierSpeichern.Text = "Speichern";
+            btnTierSpeichern.UseVisualStyleBackColor = true;
+            btnTierSpeichern.Click += btnTierSpeichern_Click;
             // 
             // lstTiere
             // 
-            this.lstTiere.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstTiere.FormattingEnabled = true;
-            this.lstTiere.ItemHeight = 15;
-            this.lstTiere.Location = new System.Drawing.Point(450, 20);
-            this.lstTiere.Name = "lstTiere";
-            this.lstTiere.Size = new System.Drawing.Size(420, 424);
-            this.lstTiere.TabIndex = 10;
-            this.lstTiere.SelectedIndexChanged += new System.EventHandler(this.lstTiere_SelectedIndexChanged);
+            lstTiere.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            lstTiere.FormattingEnabled = true;
+            lstTiere.ItemHeight = 15;
+            lstTiere.Location = new Point(450, 20);
+            lstTiere.Name = "lstTiere";
+            lstTiere.Size = new Size(420, 424);
+            lstTiere.TabIndex = 10;
+            lstTiere.SelectedIndexChanged += lstTiere_SelectedIndexChanged;
             // 
             // cboTierGehege
             // 
-            this.cboTierGehege.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTierGehege.FormattingEnabled = true;
-            this.cboTierGehege.Location = new System.Drawing.Point(106, 180);
-            this.cboTierGehege.Name = "cboTierGehege";
-            this.cboTierGehege.Size = new System.Drawing.Size(250, 23);
-            this.cboTierGehege.TabIndex = 9;
+            cboTierGehege.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboTierGehege.FormattingEnabled = true;
+            cboTierGehege.Location = new Point(106, 180);
+            cboTierGehege.Name = "cboTierGehege";
+            cboTierGehege.Size = new Size(250, 23);
+            cboTierGehege.TabIndex = 9;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 183);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 15);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Gehege";
+            label9.AutoSize = true;
+            label9.Location = new Point(20, 183);
+            label9.Name = "label9";
+            label9.Size = new Size(47, 15);
+            label9.TabIndex = 8;
+            label9.Text = "Gehege";
             // 
             // cboTierart
             // 
-            this.cboTierart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTierart.FormattingEnabled = true;
-            this.cboTierart.Location = new System.Drawing.Point(106, 151);
-            this.cboTierart.Name = "cboTierart";
-            this.cboTierart.Size = new System.Drawing.Size(250, 23);
-            this.cboTierart.TabIndex = 7;
+            cboTierart.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboTierart.FormattingEnabled = true;
+            cboTierart.Location = new Point(106, 151);
+            cboTierart.Name = "cboTierart";
+            cboTierart.Size = new Size(250, 23);
+            cboTierart.TabIndex = 7;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 154);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 15);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Tierart";
+            label8.AutoSize = true;
+            label8.Location = new Point(20, 154);
+            label8.Name = "label8";
+            label8.Size = new Size(41, 15);
+            label8.TabIndex = 6;
+            label8.Text = "Tierart";
             // 
             // dtpTierGeburt
             // 
-            this.dtpTierGeburt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTierGeburt.Location = new System.Drawing.Point(106, 122);
-            this.dtpTierGeburt.Name = "dtpTierGeburt";
-            this.dtpTierGeburt.Size = new System.Drawing.Size(250, 23);
-            this.dtpTierGeburt.TabIndex = 5;
+            dtpTierGeburt.Format = DateTimePickerFormat.Short;
+            dtpTierGeburt.Location = new Point(106, 122);
+            dtpTierGeburt.Name = "dtpTierGeburt";
+            dtpTierGeburt.Size = new Size(250, 23);
+            dtpTierGeburt.TabIndex = 5;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 128);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 15);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Geburtsdatum";
+            label7.AutoSize = true;
+            label7.Location = new Point(20, 128);
+            label7.Name = "label7";
+            label7.Size = new Size(83, 15);
+            label7.TabIndex = 4;
+            label7.Text = "Geburtsdatum";
             // 
             // txtTierGewicht
             // 
-            this.txtTierGewicht.Location = new System.Drawing.Point(106, 79);
-            this.txtTierGewicht.Name = "txtTierGewicht";
-            this.txtTierGewicht.Size = new System.Drawing.Size(250, 23);
-            this.txtTierGewicht.TabIndex = 3;
+            txtTierGewicht.Location = new Point(106, 79);
+            txtTierGewicht.Name = "txtTierGewicht";
+            txtTierGewicht.Size = new Size(250, 23);
+            txtTierGewicht.TabIndex = 3;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 15);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Gewicht";
+            label6.AutoSize = true;
+            label6.Location = new Point(20, 82);
+            label6.Name = "label6";
+            label6.Size = new Size(50, 15);
+            label6.TabIndex = 2;
+            label6.Text = "Gewicht";
             // 
             // txtTierName
             // 
-            this.txtTierName.Location = new System.Drawing.Point(106, 34);
-            this.txtTierName.Name = "txtTierName";
-            this.txtTierName.Size = new System.Drawing.Size(250, 23);
-            this.txtTierName.TabIndex = 1;
+            txtTierName.Location = new Point(106, 34);
+            txtTierName.Name = "txtTierName";
+            txtTierName.Size = new Size(250, 23);
+            txtTierName.TabIndex = 1;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 15);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Name";
+            label5.AutoSize = true;
+            label5.Location = new Point(20, 37);
+            label5.Name = "label5";
+            label5.Size = new Size(39, 15);
+            label5.TabIndex = 0;
+            label5.Text = "Name";
             // 
             // tabFutter
             // 
-            this.tabFutter.Controls.Add(this.btnFutterLoeschen);
-            this.tabFutter.Controls.Add(this.btnFutterSpeichern);
-            this.tabFutter.Controls.Add(this.lstFutter);
-            this.tabFutter.Controls.Add(this.txtFutterKommentar);
-            this.tabFutter.Controls.Add(this.label12);
-            this.tabFutter.Controls.Add(this.txtFutterVerpackung);
-            this.tabFutter.Controls.Add(this.label11);
-            this.tabFutter.Controls.Add(this.txtFutterBez);
-            this.tabFutter.Controls.Add(this.label10);
-            this.tabFutter.Location = new System.Drawing.Point(4, 24);
-            this.tabFutter.Name = "tabFutter";
-            this.tabFutter.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFutter.Size = new System.Drawing.Size(892, 472);
-            this.tabFutter.TabIndex = 4;
-            this.tabFutter.Text = "Futter";
-            this.tabFutter.UseVisualStyleBackColor = true;
+            tabFutter.Controls.Add(btnFutterLoeschen);
+            tabFutter.Controls.Add(btnFutterSpeichern);
+            tabFutter.Controls.Add(lstFutter);
+            tabFutter.Controls.Add(txtFutterKommentar);
+            tabFutter.Controls.Add(label12);
+            tabFutter.Controls.Add(txtFutterVerpackung);
+            tabFutter.Controls.Add(label11);
+            tabFutter.Controls.Add(txtFutterBez);
+            tabFutter.Controls.Add(label10);
+            tabFutter.Location = new Point(4, 24);
+            tabFutter.Name = "tabFutter";
+            tabFutter.Padding = new Padding(3);
+            tabFutter.Size = new Size(892, 472);
+            tabFutter.TabIndex = 4;
+            tabFutter.Text = "Futter";
+            tabFutter.UseVisualStyleBackColor = true;
             // 
             // btnFutterLoeschen
             // 
-            this.btnFutterLoeschen.Location = new System.Drawing.Point(187, 210);
-            this.btnFutterLoeschen.Name = "btnFutterLoeschen";
-            this.btnFutterLoeschen.Size = new System.Drawing.Size(75, 23);
-            this.btnFutterLoeschen.TabIndex = 8;
-            this.btnFutterLoeschen.Text = "Löschen";
-            this.btnFutterLoeschen.UseVisualStyleBackColor = true;
-            this.btnFutterLoeschen.Click += new System.EventHandler(this.btnFutterLoeschen_Click);
+            btnFutterLoeschen.Location = new Point(187, 210);
+            btnFutterLoeschen.Name = "btnFutterLoeschen";
+            btnFutterLoeschen.Size = new Size(75, 23);
+            btnFutterLoeschen.TabIndex = 8;
+            btnFutterLoeschen.Text = "Löschen";
+            btnFutterLoeschen.UseVisualStyleBackColor = true;
+            btnFutterLoeschen.Click += btnFutterLoeschen_Click;
             // 
             // btnFutterSpeichern
             // 
-            this.btnFutterSpeichern.Location = new System.Drawing.Point(106, 210);
-            this.btnFutterSpeichern.Name = "btnFutterSpeichern";
-            this.btnFutterSpeichern.Size = new System.Drawing.Size(75, 23);
-            this.btnFutterSpeichern.TabIndex = 7;
-            this.btnFutterSpeichern.Text = "Speichern";
-            this.btnFutterSpeichern.UseVisualStyleBackColor = true;
-            this.btnFutterSpeichern.Click += new System.EventHandler(this.btnFutterSpeichern_Click);
+            btnFutterSpeichern.Location = new Point(106, 210);
+            btnFutterSpeichern.Name = "btnFutterSpeichern";
+            btnFutterSpeichern.Size = new Size(75, 23);
+            btnFutterSpeichern.TabIndex = 7;
+            btnFutterSpeichern.Text = "Speichern";
+            btnFutterSpeichern.UseVisualStyleBackColor = true;
+            btnFutterSpeichern.Click += btnFutterSpeichern_Click;
             // 
             // lstFutter
             // 
-            this.lstFutter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstFutter.FormattingEnabled = true;
-            this.lstFutter.ItemHeight = 15;
-            this.lstFutter.Location = new System.Drawing.Point(450, 20);
-            this.lstFutter.Name = "lstFutter";
-            this.lstFutter.Size = new System.Drawing.Size(420, 424);
-            this.lstFutter.TabIndex = 6;
-            this.lstFutter.SelectedIndexChanged += new System.EventHandler(this.lstFutter_SelectedIndexChanged);
+            lstFutter.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            lstFutter.FormattingEnabled = true;
+            lstFutter.ItemHeight = 15;
+            lstFutter.Location = new Point(450, 20);
+            lstFutter.Name = "lstFutter";
+            lstFutter.Size = new Size(420, 424);
+            lstFutter.TabIndex = 6;
+            lstFutter.SelectedIndexChanged += lstFutter_SelectedIndexChanged;
             // 
             // txtFutterKommentar
             // 
-            this.txtFutterKommentar.Location = new System.Drawing.Point(106, 107);
-            this.txtFutterKommentar.Multiline = true;
-            this.txtFutterKommentar.Name = "txtFutterKommentar";
-            this.txtFutterKommentar.Size = new System.Drawing.Size(300, 86);
-            this.txtFutterKommentar.TabIndex = 5;
+            txtFutterKommentar.Location = new Point(106, 107);
+            txtFutterKommentar.Multiline = true;
+            txtFutterKommentar.Name = "txtFutterKommentar";
+            txtFutterKommentar.Size = new Size(300, 86);
+            txtFutterKommentar.TabIndex = 5;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(20, 110);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 15);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Kommentar";
+            label12.AutoSize = true;
+            label12.Location = new Point(20, 110);
+            label12.Name = "label12";
+            label12.Size = new Size(70, 15);
+            label12.TabIndex = 4;
+            label12.Text = "Kommentar";
             // 
             // txtFutterVerpackung
             // 
-            this.txtFutterVerpackung.Location = new System.Drawing.Point(106, 65);
-            this.txtFutterVerpackung.Name = "txtFutterVerpackung";
-            this.txtFutterVerpackung.Size = new System.Drawing.Size(300, 23);
-            this.txtFutterVerpackung.TabIndex = 3;
+            txtFutterVerpackung.Location = new Point(106, 65);
+            txtFutterVerpackung.Name = "txtFutterVerpackung";
+            txtFutterVerpackung.Size = new Size(300, 23);
+            txtFutterVerpackung.TabIndex = 3;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 68);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 15);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Verpackungsgr.";
+            label11.AutoSize = true;
+            label11.Location = new Point(20, 68);
+            label11.Name = "label11";
+            label11.Size = new Size(88, 15);
+            label11.TabIndex = 2;
+            label11.Text = "Verpackungsgr.";
             // 
             // txtFutterBez
             // 
-            this.txtFutterBez.Location = new System.Drawing.Point(106, 26);
-            this.txtFutterBez.Name = "txtFutterBez";
-            this.txtFutterBez.Size = new System.Drawing.Size(300, 23);
-            this.txtFutterBez.TabIndex = 1;
+            txtFutterBez.Location = new Point(106, 26);
+            txtFutterBez.Name = "txtFutterBez";
+            txtFutterBez.Size = new Size(300, 23);
+            txtFutterBez.TabIndex = 1;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 15);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Bezeichnung";
+            label10.AutoSize = true;
+            label10.Location = new Point(20, 29);
+            label10.Name = "label10";
+            label10.Size = new Size(75, 15);
+            label10.TabIndex = 0;
+            label10.Text = "Bezeichnung";
             // 
             // tabRationen
             // 
-            this.tabRationen.Controls.Add(this.btnRationLoeschen);
-            this.tabRationen.Controls.Add(this.btnRationSpeichern);
-            this.tabRationen.Controls.Add(this.lstRationen);
-            this.tabRationen.Controls.Add(this.dtpRationUhrzeit);
-            this.tabRationen.Controls.Add(this.label16);
-            this.tabRationen.Controls.Add(this.txtRationMenge);
-            this.tabRationen.Controls.Add(this.label15);
-            this.tabRationen.Controls.Add(this.cboRationFutter);
-            this.tabRationen.Controls.Add(this.label14);
-            this.tabRationen.Controls.Add(this.cboRationTier);
-            this.tabRationen.Controls.Add(this.label13);
-            this.tabRationen.Location = new System.Drawing.Point(4, 24);
-            this.tabRationen.Name = "tabRationen";
-            this.tabRationen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRationen.Size = new System.Drawing.Size(892, 472);
-            this.tabRationen.TabIndex = 5;
-            this.tabRationen.Text = "Futterrationen";
-            this.tabRationen.UseVisualStyleBackColor = true;
+            tabRationen.Controls.Add(btnRationLoeschen);
+            tabRationen.Controls.Add(btnRationSpeichern);
+            tabRationen.Controls.Add(lstRationen);
+            tabRationen.Controls.Add(dtpRationUhrzeit);
+            tabRationen.Controls.Add(label16);
+            tabRationen.Controls.Add(txtRationMenge);
+            tabRationen.Controls.Add(label15);
+            tabRationen.Controls.Add(cboRationFutter);
+            tabRationen.Controls.Add(label14);
+            tabRationen.Controls.Add(cboRationTier);
+            tabRationen.Controls.Add(label13);
+            tabRationen.Location = new Point(4, 24);
+            tabRationen.Name = "tabRationen";
+            tabRationen.Padding = new Padding(3);
+            tabRationen.Size = new Size(892, 472);
+            tabRationen.TabIndex = 5;
+            tabRationen.Text = "Futterrationen";
+            tabRationen.UseVisualStyleBackColor = true;
             // 
             // btnRationLoeschen
             // 
-            this.btnRationLoeschen.Location = new System.Drawing.Point(187, 210);
-            this.btnRationLoeschen.Name = "btnRationLoeschen";
-            this.btnRationLoeschen.Size = new System.Drawing.Size(75, 23);
-            this.btnRationLoeschen.TabIndex = 10;
-            this.btnRationLoeschen.Text = "Löschen";
-            this.btnRationLoeschen.UseVisualStyleBackColor = true;
-            this.btnRationLoeschen.Click += new System.EventHandler(this.btnRationLoeschen_Click);
+            btnRationLoeschen.Location = new Point(187, 210);
+            btnRationLoeschen.Name = "btnRationLoeschen";
+            btnRationLoeschen.Size = new Size(75, 23);
+            btnRationLoeschen.TabIndex = 10;
+            btnRationLoeschen.Text = "Löschen";
+            btnRationLoeschen.UseVisualStyleBackColor = true;
+            btnRationLoeschen.Click += btnRationLoeschen_Click;
             // 
             // btnRationSpeichern
             // 
-            this.btnRationSpeichern.Location = new System.Drawing.Point(106, 210);
-            this.btnRationSpeichern.Name = "btnRationSpeichern";
-            this.btnRationSpeichern.Size = new System.Drawing.Size(75, 23);
-            this.btnRationSpeichern.TabIndex = 9;
-            this.btnRationSpeichern.Text = "Speichern";
-            this.btnRationSpeichern.UseVisualStyleBackColor = true;
-            this.btnRationSpeichern.Click += new System.EventHandler(this.btnRationSpeichern_Click);
+            btnRationSpeichern.Location = new Point(106, 210);
+            btnRationSpeichern.Name = "btnRationSpeichern";
+            btnRationSpeichern.Size = new Size(75, 23);
+            btnRationSpeichern.TabIndex = 9;
+            btnRationSpeichern.Text = "Speichern";
+            btnRationSpeichern.UseVisualStyleBackColor = true;
+            btnRationSpeichern.Click += btnRationSpeichern_Click;
             // 
             // lstRationen
             // 
-            this.lstRationen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstRationen.FormattingEnabled = true;
-            this.lstRationen.ItemHeight = 15;
-            this.lstRationen.Location = new System.Drawing.Point(450, 20);
-            this.lstRationen.Name = "lstRationen";
-            this.lstRationen.Size = new System.Drawing.Size(420, 424);
-            this.lstRationen.TabIndex = 8;
+            lstRationen.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            lstRationen.FormattingEnabled = true;
+            lstRationen.ItemHeight = 15;
+            lstRationen.Location = new Point(450, 20);
+            lstRationen.Name = "lstRationen";
+            lstRationen.Size = new Size(420, 424);
+            lstRationen.TabIndex = 8;
             // 
             // dtpRationUhrzeit
             // 
-            this.dtpRationUhrzeit.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpRationUhrzeit.Location = new System.Drawing.Point(106, 162);
-            this.dtpRationUhrzeit.Name = "dtpRationUhrzeit";
-            this.dtpRationUhrzeit.ShowUpDown = true;
-            this.dtpRationUhrzeit.Size = new System.Drawing.Size(200, 23);
-            this.dtpRationUhrzeit.TabIndex = 7;
+            dtpRationUhrzeit.Format = DateTimePickerFormat.Time;
+            dtpRationUhrzeit.Location = new Point(106, 162);
+            dtpRationUhrzeit.Name = "dtpRationUhrzeit";
+            dtpRationUhrzeit.ShowUpDown = true;
+            dtpRationUhrzeit.Size = new Size(200, 23);
+            dtpRationUhrzeit.TabIndex = 7;
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(20, 168);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(47, 15);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Uhrzeit";
+            label16.AutoSize = true;
+            label16.Location = new Point(20, 168);
+            label16.Name = "label16";
+            label16.Size = new Size(44, 15);
+            label16.TabIndex = 6;
+            label16.Text = "Uhrzeit";
             // 
             // txtRationMenge
             // 
-            this.txtRationMenge.Location = new System.Drawing.Point(106, 121);
-            this.txtRationMenge.Name = "txtRationMenge";
-            this.txtRationMenge.Size = new System.Drawing.Size(200, 23);
-            this.txtRationMenge.TabIndex = 5;
+            txtRationMenge.Location = new Point(106, 121);
+            txtRationMenge.Name = "txtRationMenge";
+            txtRationMenge.Size = new Size(200, 23);
+            txtRationMenge.TabIndex = 5;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(20, 124);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(44, 15);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "Menge";
+            label15.AutoSize = true;
+            label15.Location = new Point(20, 124);
+            label15.Name = "label15";
+            label15.Size = new Size(44, 15);
+            label15.TabIndex = 4;
+            label15.Text = "Menge";
             // 
             // cboRationFutter
             // 
-            this.cboRationFutter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRationFutter.FormattingEnabled = true;
-            this.cboRationFutter.Location = new System.Drawing.Point(106, 79);
-            this.cboRationFutter.Name = "cboRationFutter";
-            this.cboRationFutter.Size = new System.Drawing.Size(250, 23);
-            this.cboRationFutter.TabIndex = 3;
+            cboRationFutter.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboRationFutter.FormattingEnabled = true;
+            cboRationFutter.Location = new Point(106, 79);
+            cboRationFutter.Name = "cboRationFutter";
+            cboRationFutter.Size = new Size(250, 23);
+            cboRationFutter.TabIndex = 3;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(20, 82);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 15);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Futter";
+            label14.AutoSize = true;
+            label14.Location = new Point(20, 82);
+            label14.Name = "label14";
+            label14.Size = new Size(38, 15);
+            label14.TabIndex = 2;
+            label14.Text = "Futter";
             // 
             // cboRationTier
             // 
-            this.cboRationTier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRationTier.FormattingEnabled = true;
-            this.cboRationTier.Location = new System.Drawing.Point(106, 37);
-            this.cboRationTier.Name = "cboRationTier";
-            this.cboRationTier.Size = new System.Drawing.Size(250, 23);
-            this.cboRationTier.TabIndex = 1;
-            this.cboRationTier.SelectedIndexChanged += new System.EventHandler(this.cboRationTier_SelectedIndexChanged);
+            cboRationTier.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboRationTier.FormattingEnabled = true;
+            cboRationTier.Location = new Point(106, 37);
+            cboRationTier.Name = "cboRationTier";
+            cboRationTier.Size = new Size(250, 23);
+            cboRationTier.TabIndex = 1;
+            cboRationTier.SelectedIndexChanged += cboRationTier_SelectedIndexChanged;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(20, 40);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(25, 15);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Tier";
+            label13.AutoSize = true;
+            label13.Location = new Point(20, 40);
+            label13.Name = "label13";
+            label13.Size = new Size(27, 15);
+            label13.TabIndex = 0;
+            label13.Text = "Tier";
             // 
             // tabUebersicht
             // 
-            this.tabUebersicht.Controls.Add(this.dgvUebersicht);
-            this.tabUebersicht.Location = new System.Drawing.Point(4, 24);
-            this.tabUebersicht.Name = "tabUebersicht";
-            this.tabUebersicht.Padding = new System.Windows.Forms.Padding(3);
-            this.tabUebersicht.Size = new System.Drawing.Size(892, 472);
-            this.tabUebersicht.TabIndex = 6;
-            this.tabUebersicht.Text = "Übersicht";
-            this.tabUebersicht.UseVisualStyleBackColor = true;
+            tabUebersicht.Controls.Add(dgvUebersicht);
+            tabUebersicht.Location = new Point(4, 24);
+            tabUebersicht.Name = "tabUebersicht";
+            tabUebersicht.Padding = new Padding(3);
+            tabUebersicht.Size = new Size(892, 472);
+            tabUebersicht.TabIndex = 6;
+            tabUebersicht.Text = "Übersicht";
+            tabUebersicht.UseVisualStyleBackColor = true;
             // 
             // dgvUebersicht
             // 
-            this.dgvUebersicht.AllowUserToAddRows = false;
-            this.dgvUebersicht.AllowUserToDeleteRows = false;
-            this.dgvUebersicht.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUebersicht.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUebersicht.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUebersicht.Location = new System.Drawing.Point(3, 3);
-            this.dgvUebersicht.Name = "dgvUebersicht";
-            this.dgvUebersicht.ReadOnly = true;
-            this.dgvUebersicht.RowTemplate.Height = 25;
-            this.dgvUebersicht.Size = new System.Drawing.Size(886, 466);
-            this.dgvUebersicht.TabIndex = 0;
+            dgvUebersicht.AllowUserToAddRows = false;
+            dgvUebersicht.AllowUserToDeleteRows = false;
+            dgvUebersicht.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvUebersicht.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUebersicht.Dock = DockStyle.Fill;
+            dgvUebersicht.Location = new Point(3, 3);
+            dgvUebersicht.Name = "dgvUebersicht";
+            dgvUebersicht.ReadOnly = true;
+            dgvUebersicht.Size = new Size(886, 466);
+            dgvUebersicht.TabIndex = 0;
+            // 
+            // tabFuetterungen
+            // 
+            tabFuetterungen.Controls.Add(Fütterungen);
+            tabFuetterungen.Controls.Add(dgvFütterungen);
+            tabFuetterungen.Controls.Add(cboUebersichtTier);
+            tabFuetterungen.Location = new Point(4, 24);
+            tabFuetterungen.Name = "tabFuetterungen";
+            tabFuetterungen.Padding = new Padding(3);
+            tabFuetterungen.Size = new Size(892, 472);
+            tabFuetterungen.TabIndex = 7;
+            tabFuetterungen.Text = "Fütterungen";
+            tabFuetterungen.UseVisualStyleBackColor = true;
+            // 
+            // Fütterungen
+            // 
+            Fütterungen.AutoSize = true;
+            Fütterungen.Location = new Point(24, 13);
+            Fütterungen.Name = "Fütterungen";
+            Fütterungen.Size = new Size(72, 15);
+            Fütterungen.TabIndex = 2;
+            Fütterungen.Text = "Fütterungen";
+            Fütterungen.Click += Fütterungen_Click;
+            // 
+            // dgvFütterungen
+            // 
+            dgvFütterungen.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvFütterungen.Location = new Point(24, 44);
+            dgvFütterungen.Name = "dgvFütterungen";
+            dgvFütterungen.Size = new Size(850, 359);
+            dgvFütterungen.TabIndex = 1;
+            // 
+            // cboUebersichtTier
+            // 
+            cboUebersichtTier.FormattingEnabled = true;
+            cboUebersichtTier.Location = new Point(24, 423);
+            cboUebersichtTier.Name = "cboUebersichtTier";
+            cboUebersichtTier.Size = new Size(121, 23);
+            cboUebersichtTier.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 500);
-            this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
-            this.Text = "Zooverwaltung (erweitert mit Futter)";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabKontinent.ResumeLayout(false);
-            this.tabKontinent.PerformLayout();
-            this.tabGehege.ResumeLayout(false);
-            this.tabGehege.PerformLayout();
-            this.tabTierart.ResumeLayout(false);
-            this.tabTierart.PerformLayout();
-            this.tabTiere.ResumeLayout(false);
-            this.tabTiere.PerformLayout();
-            this.tabFutter.ResumeLayout(false);
-            this.tabFutter.PerformLayout();
-            this.tabRationen.ResumeLayout(false);
-            this.tabRationen.PerformLayout();
-            this.tabUebersicht.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUebersicht)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(900, 500);
+            Controls.Add(tabFütterungen);
+            Name = "Form1";
+            Text = "Zooverwaltung (erweitert mit Futter)";
+            Load += Form1_Load;
+            tabFütterungen.ResumeLayout(false);
+            tabKontinent.ResumeLayout(false);
+            tabKontinent.PerformLayout();
+            tabGehege.ResumeLayout(false);
+            tabGehege.PerformLayout();
+            tabTierart.ResumeLayout(false);
+            tabTierart.PerformLayout();
+            tabTiere.ResumeLayout(false);
+            tabTiere.PerformLayout();
+            tabFutter.ResumeLayout(false);
+            tabFutter.PerformLayout();
+            tabRationen.ResumeLayout(false);
+            tabRationen.PerformLayout();
+            tabUebersicht.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvUebersicht).EndInit();
+            tabFuetterungen.ResumeLayout(false);
+            tabFuetterungen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvFütterungen).EndInit();
+            ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabFütterungen;
         private System.Windows.Forms.TabPage tabKontinent;
         private System.Windows.Forms.Button btnKontinentLoeschen;
         private System.Windows.Forms.Button btnKontinentSpeichern;
@@ -790,5 +832,9 @@ namespace Zooverwaltung
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TabPage tabUebersicht;
         private System.Windows.Forms.DataGridView dgvUebersicht;
+        private TabPage tabFuetterungen;
+        private ComboBox cboUebersichtTier;
+        private Label Fütterungen;
+        private DataGridView dgvFütterungen;
     }
 }
